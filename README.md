@@ -6,8 +6,9 @@ This is an example of the union find algorithm using a tree based implementation
 
 It takes as input a file with the following format: 
 > The file starts with a line of two integers N and M (1<=N, M<=1000). N indicates the number of friends; the friends are marked from 1 to N. Then M lines follow. Each line consists of two integers A and B (A != B), that means friend A and friend B know each other.
-Sample Input:
+
 ```
+Sample Input:
 5 3
 1 2
 2 3
@@ -16,8 +17,8 @@ Sample Input:
 
 It outputs the number of disjoint sets in the data.
 
-> Sample Output (Given the input data above):
 ```
+Sample Output (Given the input data above):
  2
 ```
 ## How to Run 

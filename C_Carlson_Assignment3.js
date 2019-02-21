@@ -14,7 +14,6 @@ function processData(dataArray){
 			nFriends = vals[0];
 			nRelations = vals[1];
 			friendsArray = makeSet(nFriends);
-			console.log(`Number friends = ${nFriends}\nNumber Relations = ${nRelations}\n`);
 		}
 		else{
 			let vals = dataArray[i].split(' ');
@@ -68,7 +67,7 @@ function makeSet(numberOfSets){
 }
 
 function countSets(friendsArray){
-	let nSets = friendsArray.length;
+	let nSets = Object.keys(friendsArray).length;
 	for(let i in friendsArray){
 		if(friendsArray[i].self != friendsArray[i].parent){
 			nSets--;

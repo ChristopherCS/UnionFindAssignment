@@ -25,7 +25,9 @@ Sample Output (Given the input data above):
 This program requires node.js to be installed in order to run. If you do not have node installed, downloads	are available [at the node website](https://nodejs.org/en/download/). If it's more convenient, instructions for installing node via your system's package manager can be found [here](https://nodejs.org/en/download/package-manager/).
 
 Once node is installed, the program can be run from the command line with the command: 
-`$ node C_Carlson_Assignment3.js inputFileName`
+```
+$ node C_Carlson_Assignment3.js inputFileName
+```
 
 It is important that the name of the input file is passed as an argument when calling the program, or the program will not run. Also, ensure the input file is formatted according to the specifications shown above, or the program will not function properly.
 

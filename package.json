@@ -1,0 +1,23 @@
+{
+  "name": "union_find_assignment",
+  "version": "1.0.0",
+  "description": "Simple union find example for algorithm analysis class.",
+  "main": "C_Carlson_Assignment3.js",
+  "dependencies": {
+    "jshint": "^2.10.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristopherCS/UnionFindAssignment.git"
+  },
+  "author": "Chris Carlson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChristopherCS/UnionFindAssignment/issues"
+  },
+  "homepage": "https://github.com/ChristopherCS/UnionFindAssignment#readme"
+}

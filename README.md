@@ -1,5 +1,6 @@
 # Union Find Example
-**CS4310 Assignment 3, by Chris Carlson**
+**CS4310 Assignment 3**
+**By Chris Carlson**
 
 This is an example of the union find algorithm using a tree based implementation, (but without the path compression heuristic). It was written for CS4310, Analysis of Algorithms.
 
@@ -22,3 +23,6 @@ This program requires node.js to be installed in order to run. If you do not hav
 Once node is installed, the program can be run from the command line with the command: `$ node C_Carlson_Assignment3.js inputFileName`
 
 It is important that the name of the input file is passed as an argument when calling the program, or the program will not run. Also, ensure the input file is formatted according to the specifications shown above, or the program will not function properly.
+
+
+#### License MIT

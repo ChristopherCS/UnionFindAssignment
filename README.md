@@ -24,6 +24,6 @@ Once node is installed, the program can be run from the command line with the co
 
 It is important that the name of the input file is passed as an argument when calling the program, or the program will not run. Also, ensure the input file is formatted according to the specifications shown above, or the program will not function properly.
 
-**Visit the project's repository on github at [https://github.com/ChristopherCS/UnionFindAssignment](https://github.com/ChristopherCS/UnionFindAssignment).**
+**Visit the project's repository on github at [https://github.com/ChristopherCS/UnionFindAssignment](https://github.com/ChristopherCS/UnionFindAssignment).** 
 
 #### License MIT

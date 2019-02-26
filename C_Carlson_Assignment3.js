@@ -32,7 +32,7 @@ function processData(dataArray){
 			let frA = vals[0] - 1;
 			let frB = vals[1] - 1;
 			// If no relationship exists, union the two friends.
-			if(!find(frA, frB, friendsArray)){
+			if(find(frA, friendsArray) !== find(frB, friendsArray)){
 				union(frA, frB, friendsArray);
 			}
 		}
@@ -41,38 +41,26 @@ function processData(dataArray){
 	console.log(countSets(friendsArray));
 }
 
-// Really simple. Point one friends "parent" to the other friend.
+// Here we traverse to the root of the tree for one of the friends and
+// during the traversal, we point all the members of the tree to friend B
+// as a new root. This should effectively compress the path, as we traverse it.
 function union(friendA, friendB, fArray){
-	fArray[friendA].parent = friendB;
+	let temp = friendA;
+	do{
+		let parent = fArray[temp];
+		fArray[temp] = friendB;
+		 temp = parent;
+	}while(temp !== fArray[temp]);
 }
 
 
-// Here see if a relationship exists by traversing each 
-// friend's tree, looking for the other friend.
-function find(friendA, friendB, fArray){
-	let l1 = fArray[friendA];
-	let l2 = fArray[friendB];
-	let found = false;
-
-// As long as we haven't encountered the root...
-	while(l1.parent != l1.self && !found){
-		if(l1.parent == l2.self){
-			found = true;
-		}else{
-			l1 = fArray[l1.parent];
-		}
+// Find the root of the tree the friend is a part of
+// and return the identifier of this root node.
+function find(friend, fArray){
+	while(friend !== fArray[friend]){
+		friend = fArray[friend];
 	}
-	// Need to reset l1 to its original position.
-	l1 = fArray[friendA];	
-	// Now traverse the tree of the other friend.
-	while(l2.parent != l2.self && !found){
-		if(l2.parent == l1.self){
-			found = true;
-		}else{
-			l2 = fArray[l2.parent];
-		}
-	}
-	return(found);
+	return(friend);
 }
 
 
@@ -81,10 +69,7 @@ function makeSet(numberOfSets){
 	let i = 0;
 	let storageArray = {};
 	for(i; i<numberOfSets; i++){
-		storageArray[i] = {
-			"self":i,
-			"parent":i
-		};
+		storageArray[i] = i;
 	}
 	return storageArray;
 }
@@ -94,7 +79,7 @@ function makeSet(numberOfSets){
 function countSets(friendsArray){
 	let nSets = Object.keys(friendsArray).length;
 	for(let i in friendsArray){
-		if(friendsArray[i].self != friendsArray[i].parent){
+		if(i != friendsArray[i]){
 			nSets--;
 		}
 	}

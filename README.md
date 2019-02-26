@@ -2,7 +2,7 @@
 **CS4310 Assignment 3**
 **By Chris Carlson**
 
-This is an example of the union find algorithm using a tree based implementation, (but without the path compression heuristic). It was written for CS4310, Analysis of Algorithms.
+This is an example of the union find algorithm using a tree based implementation, (with the path compression heuristic). It was written for CS4310, Analysis of Algorithms.
 
 It takes as input a file with the following format: 
 > The file starts with a line of two integers N and M (1<=N, M<=1000). N indicates the number of friends; the friends are marked from 1 to N. Then M lines follow. Each line consists of two integers A and B (A != B), that means friend A and friend B know each other.
@@ -29,8 +29,13 @@ Once node is installed, the program can be run from the command line with the co
 $ node C_Carlson_Assignment3.js inputFileName
 ```
 
-It is important that the name of the input file is passed as an argument when calling the program, or the program will not run. Also, ensure the input file is formatted according to the specifications shown above, or the program will not function properly.
+It is important that the name of the input file is passed as an argument when calling the program, or the program will not run. Also, ensure the input file is formatted according to the specifications shown above, or the program will not function properly. Particularly, if there is an empty line at the end of the file, it will error and die.
 
 **Visit the project's repository on github at [https://github.com/ChristopherCS/UnionFindAssignment](https://github.com/ChristopherCS/UnionFindAssignment).** 
+
+
+## Time Complexity Analysis
+The time complexity analysis is in the markdown file called TimeComplexity (TimeComplexity.md).
+
 
 #### License MIT

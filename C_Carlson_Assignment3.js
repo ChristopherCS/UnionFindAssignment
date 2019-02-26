@@ -77,10 +77,10 @@ function makeSet(numberOfSets){
 // A function to count the number of disjoint sets. 
 // It iterates through all the members of the array, looking for tree roots. However many roots there are, that is how many disjoint sets there are.
 function countSets(friendsArray){
-	let nSets = Object.keys(friendsArray).length;
+	let nSets = 0;
 	for(let i in friendsArray){
-		if(i != friendsArray[i]){
-			nSets--;
+		if(i == friendsArray[i]){
+			nSets++;
 		}
 	}
 	return(nSets);

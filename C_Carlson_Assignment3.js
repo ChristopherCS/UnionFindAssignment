@@ -45,12 +45,16 @@ function processData(dataArray){
 // during the traversal, we point all the members of the tree to friend B
 // as a new root. This should effectively compress the path, as we traverse it.
 function union(friendA, friendB, fArray){
-	let temp = friendA;
-	do{
-		let parent = fArray[temp];
-		fArray[temp] = friendB;
-		 temp = parent;
-	}while(temp !== fArray[temp]);
+	if(friendA != fArray[friendA]){
+		let temp = friendA;
+		while(temp != fArray[temp]){
+			let parent = fArray[temp];
+			fArray[temp] = friendB;
+			temp = parent;
+		}
+	}else{
+		fArray[friendA] = friendB;
+	}
 }
 
 

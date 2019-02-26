@@ -1,3 +1,5 @@
 node_modules
 .jshintrc
-UnionFind.tar.gz
+UnionFind_v2.tar.gz
+UnionFind_V2.tar.gz
+.vscode
